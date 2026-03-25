@@ -179,59 +179,184 @@
   <section class="apps" id="apps">
     <div class="container">
       <h2 class="section-label">// APP PORTFOLIO</h2>
-      <div class="apps__grid">
+      <div class="apps__showcase-list">
 
-        <article class="app-card reveal">
-          <div class="app-card__mockup">
-            <div class="app-card__phone">
-              <div class="app-card__screen" style="background: linear-gradient(135deg, #2d5a1e, #4a8c2a, #1a3d12)"></div>
+        <!-- Natural Remedies -->
+        <article class="app-showcase reveal">
+          <div class="app-showcase__screens-wrap">
+            <div class="app-showcase__screens" data-screens="3">
+              <!-- Screen 1: Home -->
+              <div class="phone-frame phone-frame--green">
+                <div class="phone-screen">
+                  <div class="nr-home">
+                    <div class="nr-home__header">Natural Remedies</div>
+                    <div class="nr-home__hero-card">Your wellness guide</div>
+                    <div class="nr-home__search"></div>
+                    <div class="nr-home__grid">
+                      <div class="nr-home__cat">Herbs</div>
+                      <div class="nr-home__cat">Foods</div>
+                      <div class="nr-home__cat">Conditions</div>
+                      <div class="nr-home__cat">Favorites</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Screen 2: Chat -->
+              <div class="phone-frame phone-frame--green">
+                <div class="phone-screen">
+                  <div class="nr-chat">
+                    <div class="nr-chat__header">Ask Sage</div>
+                    <div class="nr-chat__body">
+                      <div class="nr-chat__bubble nr-chat__bubble--bot">I can help with natural remedies for sleep.</div>
+                      <div class="nr-chat__bubble nr-chat__bubble--user">What herbs help with anxiety?</div>
+                    </div>
+                    <div class="nr-chat__input">Type a message...</div>
+                  </div>
+                </div>
+              </div>
+              <!-- Screen 3: Favorites -->
+              <div class="phone-frame phone-frame--green">
+                <div class="phone-screen">
+                  <div class="nr-fav">
+                    <div class="nr-fav__header">Favorites</div>
+                    <div class="nr-fav__tabs">
+                      <span class="nr-fav__tab nr-fav__tab--active">Remedies</span>
+                      <span class="nr-fav__tab">Foods</span>
+                    </div>
+                    <div class="nr-fav__list">
+                      <div class="nr-fav__row"><span class="nr-fav__icon"></span><span class="nr-fav__name">Chamomile Tea</span></div>
+                      <div class="nr-fav__row"><span class="nr-fav__icon"></span><span class="nr-fav__name">Lavender Oil</span></div>
+                      <div class="nr-fav__row"><span class="nr-fav__icon"></span><span class="nr-fav__name">Turmeric Root</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="screen-dot-nav">
+              <span class="screen-dot-nav__dot screen-dot-nav__dot--active"></span>
+              <span class="screen-dot-nav__dot"></span>
+              <span class="screen-dot-nav__dot"></span>
             </div>
           </div>
-          <div class="app-card__info">
-            <h3 class="app-card__name">Natural Remedies</h3>
-            <span class="app-card__tag">Health & Wellness</span>
-            <p class="app-card__desc">Herbs, supplements & AI-powered health chat. Your natural wellness companion.</p>
+          <div class="app-showcase__info">
+            <h3 class="app-showcase__name">Natural Remedies</h3>
+            <span class="app-showcase__tag">Health &amp; Wellness</span>
+            <span class="app-showcase__platform">Android</span>
+            <p class="app-showcase__desc">Herbs, supplements &amp; AI-powered health chat. Your natural wellness companion powered by Sage AI.</p>
           </div>
         </article>
 
-        <article class="app-card reveal">
-          <div class="app-card__mockup">
-            <div class="app-card__phone">
-              <div class="app-card__screen" style="background: linear-gradient(135deg, #1a3a5c, #2a6a9c, #0d2740)"></div>
+        <!-- DeskQuest -->
+        <article class="app-showcase reveal">
+          <div class="app-showcase__screens-wrap">
+            <div class="app-showcase__screens" data-screens="3">
+              <!-- Screen 1: Splash -->
+              <div class="phone-frame phone-frame--gold">
+                <div class="phone-screen">
+                  <div class="dq-splash">
+                    <div class="dq-splash__shield">&#9960;</div>
+                    <div class="dq-splash__title">DESKQUEST</div>
+                    <div class="dq-splash__sub">MICRO-WORKOUT RPG</div>
+                    <div class="dq-splash__spinner"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- Screen 2: Home -->
+              <div class="phone-frame phone-frame--gold">
+                <div class="phone-screen">
+                  <div class="dq-home">
+                    <div class="dq-home__avatar-area">
+                      <div class="dq-home__avatar"></div>
+                    </div>
+                    <div class="dq-home__xp-bar"><div class="dq-home__xp-fill"></div></div>
+                    <div class="dq-home__stats">
+                      <span class="dq-home__stat dq-home__stat--str">STR</span>
+                      <span class="dq-home__stat dq-home__stat--sta">STA</span>
+                      <span class="dq-home__stat dq-home__stat--foc">FOC</span>
+                    </div>
+                    <div class="dq-home__btn">Start Quest</div>
+                  </div>
+                </div>
+              </div>
+              <!-- Screen 3: Stats -->
+              <div class="phone-frame phone-frame--gold">
+                <div class="phone-screen">
+                  <div class="dq-stats">
+                    <div class="dq-stats__header">Daily Quests</div>
+                    <div class="dq-stats__quests">
+                      <div class="dq-stats__quest"><span class="dq-stats__check">&#10003;</span> 20 Push-ups</div>
+                      <div class="dq-stats__quest"><span class="dq-stats__check">&#10003;</span> 5 Min Stretch</div>
+                      <div class="dq-stats__quest"><span class="dq-stats__check dq-stats__check--pending"></span> Desk Walk</div>
+                    </div>
+                    <div class="dq-stats__cards">
+                      <div class="dq-stats__card"><span class="dq-stats__card-icon">&#128293;</span><span class="dq-stats__card-val">12</span><span class="dq-stats__card-label">Streak</span></div>
+                      <div class="dq-stats__card"><span class="dq-stats__card-icon">&#128170;</span><span class="dq-stats__card-val">48</span><span class="dq-stats__card-label">Workouts</span></div>
+                      <div class="dq-stats__card"><span class="dq-stats__card-icon">&#11088;</span><span class="dq-stats__card-val">1.2k</span><span class="dq-stats__card-label">XP</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="screen-dot-nav">
+              <span class="screen-dot-nav__dot screen-dot-nav__dot--active"></span>
+              <span class="screen-dot-nav__dot"></span>
+              <span class="screen-dot-nav__dot"></span>
             </div>
           </div>
-          <div class="app-card__info">
-            <h3 class="app-card__name">ChiroAI</h3>
-            <span class="app-card__tag">Healthcare</span>
-            <p class="app-card__desc">AI consulting for chiropractic practices. Smart diagnostics, better outcomes.</p>
+          <div class="app-showcase__info">
+            <h3 class="app-showcase__name">DeskQuest</h3>
+            <span class="app-showcase__tag">Fitness RPG</span>
+            <span class="app-showcase__platform">Android</span>
+            <p class="app-showcase__desc">Micro-workout RPG for desk workers. Level up your character by completing real exercises throughout the day.</p>
           </div>
         </article>
 
-        <article class="app-card reveal">
-          <div class="app-card__mockup">
-            <div class="app-card__phone">
-              <div class="app-card__screen" style="background: linear-gradient(135deg, #1c1c3a, #3a2a5c, #0a0a20)"></div>
-            </div>
-          </div>
-          <div class="app-card__info">
-            <h3 class="app-card__name">Aero Architect</h3>
-            <span class="app-card__tag">Simulation</span>
-            <p class="app-card__desc">Aerospace engineering game. Design, test, and launch your own aircraft.</p>
-          </div>
-        </article>
-
-        <article class="app-card app-card--coming-soon reveal">
-          <div class="app-card__mockup">
-            <div class="app-card__phone app-card__phone--dashed">
-              <div class="app-card__screen" style="background: #111111">
-                <span class="app-card__placeholder-text">?</span>
+        <!-- Aero Architect (single screen) -->
+        <article class="app-showcase reveal">
+          <div class="app-showcase__screens-wrap">
+            <div class="app-showcase__screens" data-screens="1">
+              <div class="phone-frame phone-frame--orange">
+                <div class="phone-screen">
+                  <div class="aero-screen">
+                    <div class="aero-screen__header">Aero Architect</div>
+                    <div class="aero-screen__canvas">
+                      <div class="aero-screen__wing"></div>
+                      <div class="aero-screen__body"></div>
+                    </div>
+                    <div class="aero-screen__toolbar">
+                      <span></span><span></span><span></span><span></span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="app-card__info">
-            <h3 class="app-card__name">YOUR APP</h3>
-            <span class="app-card__tag">Coming Soon</span>
-            <p class="app-card__desc">Got an idea? Let's build something extraordinary together.</p>
+          <div class="app-showcase__info">
+            <h3 class="app-showcase__name">Aero Architect</h3>
+            <span class="app-showcase__tag">Simulation</span>
+            <span class="app-showcase__platform">Android</span>
+            <p class="app-showcase__desc">Aerospace engineering game. Design, test, and launch your own aircraft.</p>
+          </div>
+        </article>
+
+        <!-- Coming Soon -->
+        <article class="app-showcase app-showcase--coming-soon reveal">
+          <div class="app-showcase__screens-wrap">
+            <div class="app-showcase__screens" data-screens="1">
+              <div class="phone-frame phone-frame--muted">
+                <div class="phone-screen">
+                  <div class="coming-screen">
+                    <span class="coming-screen__q">?</span>
+                    <span class="coming-screen__text">YOUR APP</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="app-showcase__info">
+            <h3 class="app-showcase__name">YOUR APP</h3>
+            <span class="app-showcase__tag">Coming Soon</span>
+            <p class="app-showcase__desc">Got an idea? Let's build something extraordinary together.</p>
           </div>
         </article>
 

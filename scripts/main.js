@@ -161,6 +161,30 @@
     aboutObserver.observe(aboutText);
   }
 
+  // --- App Showcase Scroll Dot Nav ---
+  const showcaseContainers = document.querySelectorAll('.app-showcase__screens');
+  showcaseContainers.forEach((container) => {
+    const dotNav = container.parentElement.querySelector('.screen-dot-nav');
+    if (!dotNav) return;
+    const dots = dotNav.querySelectorAll('.screen-dot-nav__dot');
+    const frames = container.querySelectorAll('.phone-frame');
+    if (dots.length < 2 || frames.length < 2) return;
+
+    function updateDots() {
+      const scrollLeft = container.scrollLeft;
+      const containerWidth = container.offsetWidth;
+      const scrollWidth = container.scrollWidth - containerWidth;
+      if (scrollWidth <= 0) return;
+      const ratio = scrollLeft / scrollWidth;
+      const activeIndex = Math.round(ratio * (dots.length - 1));
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('screen-dot-nav__dot--active', i === activeIndex);
+      });
+    }
+
+    container.addEventListener('scroll', updateDots, { passive: true });
+  });
+
   // --- Contact Form (basic client-side handling) ---
   const form = document.querySelector('.contact__form');
   if (form) {
