@@ -108,7 +108,7 @@
           }
         });
       },
-      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+      { threshold: 0.05, rootMargin: '0px 0px -20px 0px' }
     );
 
     revealElements.forEach((el) => revealObserver.observe(el));
@@ -134,6 +134,31 @@
     );
 
     processLines.forEach((line) => lineObserver.observe(line));
+  }
+
+  // --- About Section Stagger ---
+  const aboutText = document.querySelector('.about__text');
+  const aboutStats = document.querySelector('.about__stats');
+
+  if ('IntersectionObserver' in window && aboutText && aboutStats) {
+    const aboutObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Stagger: text fades in first, stats follow with delay
+            aboutText.style.transitionDelay = '0ms';
+            aboutText.classList.add('visible');
+            setTimeout(() => {
+              aboutStats.classList.add('visible');
+            }, 250);
+            aboutObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: '0px 0px -20px 0px' }
+    );
+
+    aboutObserver.observe(aboutText);
   }
 
   // --- Contact Form (basic client-side handling) ---
