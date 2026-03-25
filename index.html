@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elite Zone Apex — Developer Network</title>
+  <meta name="description" content="Precision-crafted iOS & macOS apps that define the apex of mobile experience. Elite Zone Apex Developer Network.">
+  <meta property="og:title" content="Elite Zone Apex — Developer Network">
+  <meta property="og:description" content="Precision-crafted iOS & macOS apps that define the apex of mobile experience.">
+  <meta property="og:image" content="assets/og-image.png">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <!-- Grid Overlay -->
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <!-- Scan Line -->
+  <div class="scan-line" aria-hidden="true"></div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <!-- ========== NAV ========== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo">
+        <svg class="nav__logo-mark" viewBox="0 0 200 200" width="40" height="40">
+          <defs>
+            <filter id="nav-glow">
+              <feGaussianBlur stdDeviation="3" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+          <g filter="url(#nav-glow)" transform="translate(100,100)">
+            <polygon points="0,-75 65,37.5 -65,37.5" fill="none" stroke="#FF6B1A" stroke-width="4" stroke-linejoin="bevel"/>
+            <polygon points="0,75 65,-37.5 -65,-37.5" fill="none" stroke="#FF6B1A" stroke-width="4" stroke-linejoin="bevel"/>
+          </g>
+          <text x="100" y="95" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="700" font-size="28" fill="#FF6B1A">EZ</text>
+          <text x="100" y="120" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="700" font-size="18" fill="#FF6B1A">360</text>
+        </svg>
+        <div class="nav__logo-text">
+          <span class="nav__logo-title">ELITE ZONE APEX</span>
+          <span class="nav__logo-sub">DEVELOPER NETWORK</span>
+        </div>
+      </a>
+
+      <nav class="nav__links">
+        <a href="#services" class="nav__link">Services</a>
+        <a href="#apps" class="nav__link">Apps</a>
+        <a href="#process" class="nav__link">Process</a>
+        <a href="#about" class="nav__link">About</a>
+      </nav>
+
+      <a href="#contact" class="btn btn--outline nav__cta">START A PROJECT</a>
+
+      <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="nav__mobile-menu">
+      <a href="#services" class="nav__mobile-link">Services</a>
+      <a href="#apps" class="nav__mobile-link">Apps</a>
+      <a href="#process" class="nav__mobile-link">Process</a>
+      <a href="#about" class="nav__mobile-link">About</a>
+      <a href="#contact" class="btn btn--outline nav__mobile-cta">START A PROJECT</a>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="hero__bg" aria-hidden="true">
+      <div class="hero__glow"></div>
+    </div>
+    <div class="hero__content">
+      <svg class="hero__logo anim-fade-up" viewBox="0 0 200 200" width="120" height="120">
+        <defs>
+          <filter id="hero-glow">
+            <feGaussianBlur stdDeviation="6" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <g filter="url(#hero-glow)" transform="translate(100,100)">
+          <polygon points="0,-75 65,37.5 -65,37.5" fill="none" stroke="#FF6B1A" stroke-width="3.5" stroke-linejoin="bevel"/>
+          <polygon points="0,75 65,-37.5 -65,-37.5" fill="none" stroke="#FF6B1A" stroke-width="3.5" stroke-linejoin="bevel"/>
+        </g>
+        <text x="100" y="95" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="700" font-size="28" fill="#FF6B1A">EZ</text>
+        <text x="100" y="120" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="700" font-size="18" fill="#FF6B1A">360</text>
+      </svg>
+      <h1 class="hero__title anim-fade-up" style="animation-delay: 0.15s">ELITE ZONE APEX</h1>
+      <p class="hero__subtitle anim-fade-up" style="animation-delay: 0.3s">DEVELOPER NETWORK</p>
+      <p class="hero__tagline anim-fade-up" style="animation-delay: 0.45s">We build precision-crafted iOS &amp; macOS apps that define the apex of mobile experience.</p>
+      <div class="hero__buttons anim-fade-up" style="animation-delay: 0.6s">
+        <a href="#apps" class="btn btn--primary">VIEW OUR APPS</a>
+        <a href="#contact" class="btn btn--outline">START A PROJECT</a>
+      </div>
+    </div>
+    <div class="hero__chevron anim-fade-up" style="animation-delay: 0.75s" aria-hidden="true">
+      <svg width="30" height="18" viewBox="0 0 30 18" fill="none">
+        <path d="M2 2L15 15L28 2" stroke="#FF6B1A" stroke-width="2.5" stroke-linecap="square"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES ========== -->
+  <section class="services" id="services">
+    <div class="container">
+      <h2 class="section-label">// WHAT WE BUILD</h2>
+      <div class="services__grid">
+
+        <article class="service-card reveal">
+          <div class="service-card__accent"></div>
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" width="48" height="48"><rect x="12" y="4" width="24" height="40" rx="3" fill="none" stroke="#FF6B1A" stroke-width="2"/><line x1="20" y1="38" x2="28" y2="38" stroke="#FF6B1A" stroke-width="2" stroke-linecap="square"/><rect x="16" y="10" width="16" height="20" fill="none" stroke="#ff8c44" stroke-width="1.5" opacity="0.5"/></svg>
+          </div>
+          <h3 class="service-card__title">iOS App Development</h3>
+          <p class="service-card__desc">SwiftUI, native performance, App Store ready. Built for precision and speed.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-card__accent"></div>
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" width="48" height="48"><rect x="4" y="8" width="40" height="28" rx="2" fill="none" stroke="#FF6B1A" stroke-width="2"/><line x1="16" y1="40" x2="32" y2="40" stroke="#FF6B1A" stroke-width="2" stroke-linecap="square"/><line x1="24" y1="36" x2="24" y2="40" stroke="#FF6B1A" stroke-width="2"/><rect x="10" y="14" width="28" height="16" fill="none" stroke="#ff8c44" stroke-width="1.5" opacity="0.5"/></svg>
+          </div>
+          <h3 class="service-card__title">macOS Applications</h3>
+          <p class="service-card__desc">Multiplatform apps built with SwiftUI. Desktop-class power, native feel.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-card__accent"></div>
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" width="48" height="48"><circle cx="24" cy="20" r="14" fill="none" stroke="#FF6B1A" stroke-width="2"/><path d="M18 18 L22 24 L30 16" fill="none" stroke="#ff8c44" stroke-width="2" stroke-linecap="square"/><line x1="24" y1="34" x2="24" y2="42" stroke="#FF6B1A" stroke-width="2"/><line x1="18" y1="42" x2="30" y2="42" stroke="#FF6B1A" stroke-width="2" stroke-linecap="square"/><circle cx="24" cy="20" r="6" fill="none" stroke="#ff8c44" stroke-width="1" opacity="0.4"/></svg>
+          </div>
+          <h3 class="service-card__title">AI-Powered Features</h3>
+          <p class="service-card__desc">Claude API integration, intelligent UX. Smart features that learn and adapt.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-card__accent"></div>
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" width="48" height="48"><rect x="8" y="6" width="32" height="36" rx="2" fill="none" stroke="#FF6B1A" stroke-width="2"/><line x1="14" y1="14" x2="34" y2="14" stroke="#ff8c44" stroke-width="1.5" opacity="0.5"/><line x1="14" y1="20" x2="34" y2="20" stroke="#ff8c44" stroke-width="1.5" opacity="0.5"/><line x1="14" y1="26" x2="28" y2="26" stroke="#ff8c44" stroke-width="1.5" opacity="0.5"/><circle cx="34" cy="34" r="8" fill="none" stroke="#FF6B1A" stroke-width="2"/><path d="M31 34 L34 37 L38 31" fill="none" stroke="#FF6B1A" stroke-width="2" stroke-linecap="square"/></svg>
+          </div>
+          <h3 class="service-card__title">Backend & Data</h3>
+          <p class="service-card__desc">Supabase, real-time sync, secure auth. Solid infrastructure for every app.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-card__accent"></div>
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" width="48" height="48"><path d="M12 36 L12 20 L24 12 L36 20 L36 36" fill="none" stroke="#FF6B1A" stroke-width="2" stroke-linejoin="bevel"/><line x1="8" y1="36" x2="40" y2="36" stroke="#FF6B1A" stroke-width="2" stroke-linecap="square"/><path d="M20 36 L20 28 L28 28 L28 36" fill="none" stroke="#ff8c44" stroke-width="1.5" opacity="0.6"/><line x1="24" y1="12" x2="24" y2="8" stroke="#FF6B1A" stroke-width="2"/><circle cx="24" cy="6" r="2" fill="#FF6B1A"/></svg>
+          </div>
+          <h3 class="service-card__title">App Monetization</h3>
+          <p class="service-card__desc">StoreKit 2, subscriptions, affiliate strategy. Revenue architecture built in.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-card__accent"></div>
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" width="48" height="48"><circle cx="24" cy="24" r="18" fill="none" stroke="#FF6B1A" stroke-width="2"/><path d="M24 6 L24 12" stroke="#ff8c44" stroke-width="2" opacity="0.6"/><path d="M24 36 L24 42" stroke="#ff8c44" stroke-width="2" opacity="0.6"/><path d="M6 24 L12 24" stroke="#ff8c44" stroke-width="2" opacity="0.6"/><path d="M36 24 L42 24" stroke="#ff8c44" stroke-width="2" opacity="0.6"/><circle cx="24" cy="24" r="6" fill="none" stroke="#FF6B1A" stroke-width="2"/><path d="M18 18 L30 30" stroke="#FF6B1A" stroke-width="1.5" opacity="0.5"/></svg>
+          </div>
+          <h3 class="service-card__title">App Store Optimization</h3>
+          <p class="service-card__desc">ASO, keyword strategy, metadata. Maximum visibility, maximum downloads.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== APPS ========== -->
+  <section class="apps" id="apps">
+    <div class="container">
+      <h2 class="section-label">// APP PORTFOLIO</h2>
+      <div class="apps__grid">
+
+        <article class="app-card reveal">
+          <div class="app-card__mockup">
+            <div class="app-card__phone">
+              <div class="app-card__screen" style="background: linear-gradient(135deg, #2d5a1e, #4a8c2a, #1a3d12)"></div>
+            </div>
+          </div>
+          <div class="app-card__info">
+            <h3 class="app-card__name">Natural Remedies</h3>
+            <span class="app-card__tag">Health & Wellness</span>
+            <p class="app-card__desc">Herbs, supplements & AI-powered health chat. Your natural wellness companion.</p>
+          </div>
+        </article>
+
+        <article class="app-card reveal">
+          <div class="app-card__mockup">
+            <div class="app-card__phone">
+              <div class="app-card__screen" style="background: linear-gradient(135deg, #1a3a5c, #2a6a9c, #0d2740)"></div>
+            </div>
+          </div>
+          <div class="app-card__info">
+            <h3 class="app-card__name">ChiroAI</h3>
+            <span class="app-card__tag">Healthcare</span>
+            <p class="app-card__desc">AI consulting for chiropractic practices. Smart diagnostics, better outcomes.</p>
+          </div>
+        </article>
+
+        <article class="app-card reveal">
+          <div class="app-card__mockup">
+            <div class="app-card__phone">
+              <div class="app-card__screen" style="background: linear-gradient(135deg, #1c1c3a, #3a2a5c, #0a0a20)"></div>
+            </div>
+          </div>
+          <div class="app-card__info">
+            <h3 class="app-card__name">Aero Architect</h3>
+            <span class="app-card__tag">Simulation</span>
+            <p class="app-card__desc">Aerospace engineering game. Design, test, and launch your own aircraft.</p>
+          </div>
+        </article>
+
+        <article class="app-card app-card--coming-soon reveal">
+          <div class="app-card__mockup">
+            <div class="app-card__phone app-card__phone--dashed">
+              <div class="app-card__screen" style="background: #111111">
+                <span class="app-card__placeholder-text">?</span>
+              </div>
+            </div>
+          </div>
+          <div class="app-card__info">
+            <h3 class="app-card__name">YOUR APP</h3>
+            <span class="app-card__tag">Coming Soon</span>
+            <p class="app-card__desc">Got an idea? Let's build something extraordinary together.</p>
+          </div>
+        </article>
+
+      </div>
+      <div class="apps__cta">
+        <a href="#contact" class="btn btn--outline">VIEW ALL APPS</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROCESS ========== -->
+  <section class="process" id="process">
+    <div class="container">
+      <h2 class="section-label">// HOW WE BUILD</h2>
+      <div class="process__timeline">
+
+        <div class="process__step reveal">
+          <span class="process__number">01</span>
+          <h3 class="process__title">CONCEPT</h3>
+          <p class="process__desc">Define the vision. Research the market. Identify the apex opportunity.</p>
+        </div>
+
+        <div class="process__line" aria-hidden="true">
+          <div class="process__line-fill"></div>
+        </div>
+
+        <div class="process__step reveal">
+          <span class="process__number">02</span>
+          <h3 class="process__title">ARCHITECT</h3>
+          <p class="process__desc">Design the system. Map the data flow. Blueprint every interaction.</p>
+        </div>
+
+        <div class="process__line" aria-hidden="true">
+          <div class="process__line-fill"></div>
+        </div>
+
+        <div class="process__step reveal">
+          <span class="process__number">03</span>
+          <h3 class="process__title">BUILD</h3>
+          <p class="process__desc">SwiftUI native code. Supabase backend. Claude intelligence. Ship fast.</p>
+        </div>
+
+        <div class="process__line" aria-hidden="true">
+          <div class="process__line-fill"></div>
+        </div>
+
+        <div class="process__step reveal">
+          <span class="process__number">04</span>
+          <h3 class="process__title">LAUNCH</h3>
+          <p class="process__desc">App Store optimized. Monetization active. Analytics wired. Go live.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__text reveal">
+          <h2 class="section-label">// ABOUT THE NETWORK</h2>
+          <p class="about__paragraph">Elite Zone Apex is a solo indie development studio focused on building precision-crafted applications for the Apple ecosystem. Every app we ship is designed with obsessive attention to detail — from pixel-perfect interfaces to rock-solid architecture.</p>
+          <p class="about__paragraph">We don't build generic software. We build tools that solve real problems, generate real revenue, and push the boundaries of what indie development can achieve. Quality over quantity. Precision over speed. Apex over average.</p>
+        </div>
+        <div class="about__stats reveal">
+          <div class="about__hud">
+            <div class="about__hud-corner about__hud-corner--tl" aria-hidden="true"></div>
+            <div class="about__hud-corner about__hud-corner--tr" aria-hidden="true"></div>
+            <div class="about__hud-corner about__hud-corner--bl" aria-hidden="true"></div>
+            <div class="about__hud-corner about__hud-corner--br" aria-hidden="true"></div>
+            <div class="about__stat">
+              <span class="about__stat-label">APPS SHIPPED</span>
+              <span class="about__stat-value">6+</span>
+            </div>
+            <div class="about__stat">
+              <span class="about__stat-label">PLATFORMS</span>
+              <span class="about__stat-value">iOS · macOS</span>
+            </div>
+            <div class="about__stat">
+              <span class="about__stat-label">STACK</span>
+              <span class="about__stat-value">SwiftUI · Supabase · Claude AI</span>
+            </div>
+            <div class="about__stat">
+              <span class="about__stat-label">STATUS</span>
+              <span class="about__stat-value about__stat-value--active">[ACTIVE]<span class="blink-cursor">|</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="contact" id="contact">
+    <div class="contact__glow" aria-hidden="true"></div>
+    <div class="container">
+      <h2 class="contact__heading reveal">READY TO BUILD SOMETHING APEX?</h2>
+      <p class="contact__sub reveal">Tell us about your project. We'll tell you how to make it extraordinary.</p>
+
+      <form class="contact__form reveal" action="https://formspree.io/f/placeholder" method="POST">
+        <div class="contact__field">
+          <label for="name" class="contact__label">NAME</label>
+          <input type="text" id="name" name="name" class="contact__input" required autocomplete="name">
+        </div>
+        <div class="contact__field">
+          <label for="email" class="contact__label">EMAIL</label>
+          <input type="email" id="email" name="email" class="contact__input" required autocomplete="email">
+        </div>
+        <div class="contact__field contact__field--full">
+          <label for="message" class="contact__label">PROJECT DESCRIPTION</label>
+          <textarea id="message" name="message" class="contact__input contact__textarea" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary contact__submit">TRANSMIT</button>
+      </form>
+
+      <div class="contact__alt reveal">
+        <span class="contact__alt-text">Or reach us directly:</span>
+        <a href="mailto:hello@elitezoneapex.com" class="contact__alt-email">hello@elitezoneapex.com</a>
+      </div>
+
+      <div class="contact__social reveal">
+        <a href="https://github.com" class="contact__social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#FF6B1A" stroke-width="1.5"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.1.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85.004 1.7.114 2.5.336 1.9-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.16.59.67.5A10.003 10.003 0 0022 12c0-5.523-4.477-10-10-10z"/></svg>
+        </a>
+        <a href="https://apps.apple.com" class="contact__social-link" aria-label="App Store" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#FF6B1A" stroke-width="1.5"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        </a>
+        <a href="mailto:hello@elitezoneapex.com" class="contact__social-link" aria-label="Email">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#FF6B1A" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer__border" aria-hidden="true"></div>
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <svg class="footer__logo" viewBox="0 0 200 200" width="28" height="28">
+          <g transform="translate(100,100)">
+            <polygon points="0,-75 65,37.5 -65,37.5" fill="none" stroke="#FF6B1A" stroke-width="4" stroke-linejoin="bevel"/>
+            <polygon points="0,75 65,-37.5 -65,-37.5" fill="none" stroke="#FF6B1A" stroke-width="4" stroke-linejoin="bevel"/>
+          </g>
+          <text x="100" y="95" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="700" font-size="28" fill="#FF6B1A">EZ</text>
+          <text x="100" y="120" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="700" font-size="18" fill="#FF6B1A">360</text>
+        </svg>
+        <span class="footer__copyright">&copy; 2026 Elite Zone Apex. All rights reserved.</span>
+      </div>
+      <nav class="footer__links">
+        <a href="#services">Services</a>
+        <a href="#apps">Apps</a>
+        <a href="#process">Process</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <span class="footer__tagline">BUILT WITH PRECISION</span>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>

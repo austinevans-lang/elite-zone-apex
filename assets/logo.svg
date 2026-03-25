@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glow-strong">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Star of David shape - two overlapping triangles -->
+  <g filter="url(#glow)" transform="translate(100,100)">
+    <!-- Triangle pointing up -->
+    <polygon points="0,-75 65,37.5 -65,37.5" fill="none" stroke="#FF6B1A" stroke-width="3" stroke-linejoin="bevel"/>
+    <!-- Triangle pointing down -->
+    <polygon points="0,75 65,-37.5 -65,-37.5" fill="none" stroke="#FF6B1A" stroke-width="3" stroke-linejoin="bevel"/>
+  </g>
+  <!-- Text inside -->
+  <text x="100" y="95" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="700" font-size="28" fill="#FF6B1A" filter="url(#glow)">EZ</text>
+  <text x="100" y="120" text-anchor="middle" font-family="Orbitron, sans-serif" font-weight="700" font-size="18" fill="#FF6B1A" filter="url(#glow)">360</text>
+</svg>
